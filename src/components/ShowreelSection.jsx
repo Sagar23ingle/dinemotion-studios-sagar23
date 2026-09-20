@@ -28,7 +28,7 @@ export default function ShowreelSection() {
 
           {/* Cinematic Frame Image Placeholder from the project frames */}
           <img
-            src="/frames/frame_060.png"
+            src="/Use_the_uploaded_image_as_the_frames/frame_060.png"
             alt="Dinemotion Studios Cinematic Showreel Preview"
             className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
               isPlaying ? 'scale-105 filter brightness-105' : 'scale-100 opacity-60 filter brightness-90 group-hover:opacity-75'

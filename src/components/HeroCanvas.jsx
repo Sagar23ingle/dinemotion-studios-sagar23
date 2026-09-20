@@ -5,7 +5,7 @@ const TOTAL_FRAMES = 240;
 
 function getFrameUrl(index) {
   const frameNum = String(index + 1).padStart(3, '0');
-  return `/frames/frame_${frameNum}.png`;
+  return `/Use_the_uploaded_image_as_the_frames/frame_${frameNum}.png`;
 }
 
 function getBeatMetrics(progress, start, end, fadeInLen = 0.035, fadeOutLen = 0.035) {
@@ -261,10 +261,10 @@ export default function HeroCanvas() {
         {/* Instant Dark Fallback Frame 1 */}
         <img
           ref={fallbackImgRef}
-          src="/frames/frame_001.png"
+          src="/Use_the_uploaded_image_as_the_frames/frame_001.png"
           alt="Dinemotion Studio Hero Background"
           onLoad={() => drawFrame(0)}
-          className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none z-0 opacity-0"
+          className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none z-0"
         />
 
         {/* High performance Canvas rendering the scroll-driven frame animation */}
@@ -273,14 +273,25 @@ export default function HeroCanvas() {
           className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none z-10"
         />
 
-        {/* Cinematic Vignette Overlays for 100% invisible edge blending */}
-        <div className="absolute inset-0 pointer-events-none z-20 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/75 opacity-90" />
-        <div className="absolute inset-0 pointer-events-none z-20 bg-gradient-to-r from-[#050505]/80 via-transparent to-[#050505]/50" />
-        
-        {/* Subtle radial center glow behind typography */}
-        <div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-center">
-          <div className="w-[800px] h-[500px] bg-[radial-gradient(circle,rgba(0,80,255,0.08)_0%,rgba(5,5,5,0)_70%)] blur-3xl" />
-        </div>
+        {/* Cinematic Dark Vignette Overlays for deep contrast & text readability */}
+        <div
+          className="absolute inset-0 pointer-events-none z-20"
+          style={{
+            background: 'linear-gradient(to top, #050505 0%, rgba(5,5,5,0.25) 30%, rgba(5,5,5,0.3) 70%, rgba(5,5,5,0.85) 100%)'
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none z-20"
+          style={{
+            background: 'linear-gradient(to right, rgba(5,5,5,0.8) 0%, rgba(5,5,5,0.15) 30%, rgba(5,5,5,0.15) 70%, rgba(5,5,5,0.7) 100%)'
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none z-20"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.75) 100%)'
+          }}
+        />
 
         {/* ---------------------------------------------------- */}
         {/* BEAT 1: HERO / INTRO (0–15% scroll) - Centered       */}
@@ -294,56 +305,59 @@ export default function HeroCanvas() {
             transform: `translateY(${beat1.translateY}px)`
           }}
         >
-          {/* Eyebrow Label */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-[11px] font-mono tracking-widest text-[#a1a1a6] bg-black/50 border border-white/10 backdrop-blur-md mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
-            <span>CREATIVE TECHNOLOGY & MEDIA STUDIO</span>
-          </div>
+          {/* Subtle dark backdrop card for 100% crystal-clear readability */}
+          <div className="max-w-3xl flex flex-col items-center p-6 sm:p-10 rounded-3xl bg-black/40 backdrop-blur-md border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.7)]">
+            {/* Eyebrow Label */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-[11px] font-mono tracking-widest text-[#a1a1a6] bg-black/60 border border-white/10 backdrop-blur-md mb-6 shadow-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
+              <span>CREATIVE TECHNOLOGY & MEDIA STUDIO</span>
+            </div>
 
-          {/* Large Display Headline */}
-          <h1 className="font-display font-semibold tracking-[-0.035em] leading-[1.03] text-white text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] mb-6 text-glow">
-            <span className="block text-gradient-white">WE CREATE.</span>
-            <span className="block text-white">WE BUILD.</span>
-            <span className="block text-gradient-cyan">WE MOVE.</span>
-          </h1>
+            {/* Large Display Headline */}
+            <h1 className="font-display font-bold tracking-[-0.035em] leading-[1.03] text-white text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] mb-6 text-glow">
+              <span className="block text-gradient-white">WE CREATE.</span>
+              <span className="block text-white">WE BUILD.</span>
+              <span className="block text-gradient-cyan">WE MOVE.</span>
+            </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium tracking-tight max-w-2xl mb-3">
-            Digital experiences, applications and visual stories.
-          </p>
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl md:text-2xl text-white font-medium tracking-tight max-w-2xl mb-3 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+              Digital experiences, applications and visual stories.
+            </p>
 
-          {/* Supporting line */}
-          <p className="text-xs sm:text-sm md:text-base text-white/60 font-light max-w-xl leading-relaxed mb-8">
-            Dinemotion Studios combines design, technology and visual storytelling to create experiences for modern brands.
-          </p>
+            {/* Supporting line */}
+            <p className="text-xs sm:text-sm md:text-base text-white/80 font-light max-w-xl leading-relaxed mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Dinemotion Studios combines design, technology and visual storytelling to create experiences for modern brands.
+            </p>
 
-          {/* Intro CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#contact"
-              onClick={(e) => handleCtaClick(e, '#contact')}
-              className="btn-gradient"
-            >
-              <span>Start a Project</span>
-              <ArrowRight className="w-3.5 h-3.5 btn-arrow text-[#00D6FF]" />
-            </a>
+            {/* Intro CTAs */}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#contact"
+                onClick={(e) => handleCtaClick(e, '#contact')}
+                className="btn-gradient"
+              >
+                <span>Start a Project</span>
+                <ArrowRight className="w-3.5 h-3.5 btn-arrow text-[#00D6FF]" />
+              </a>
 
-            <a
-              href="#work"
-              onClick={(e) => handleCtaClick(e, '#work')}
-              className="btn-secondary"
-            >
-              <span>View Our Work</span>
-              <ArrowRight className="w-3.5 h-3.5 btn-arrow" />
-            </a>
-          </div>
+              <a
+                href="#work"
+                onClick={(e) => handleCtaClick(e, '#work')}
+                className="btn-secondary"
+              >
+                <span>View Our Work</span>
+                <ArrowRight className="w-3.5 h-3.5 btn-arrow" />
+              </a>
+            </div>
 
-          {/* Subtle scroll cue */}
-          <div className="mt-12 flex items-center gap-2 text-[11px] font-mono tracking-widest text-white/40 uppercase">
-            <span className="w-5 h-5 rounded-full border border-white/15 flex items-center justify-center bg-white/[0.02] animate-bounce">
-              <ChevronDown className="w-3 h-3 text-[#00D6FF]" />
-            </span>
-            <span>SCROLL TO EXPLORE STORY</span>
+            {/* Subtle scroll cue */}
+            <div className="mt-10 flex items-center gap-2 text-[11px] font-mono tracking-widest text-white/60 uppercase">
+              <span className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-bounce">
+                <ChevronDown className="w-3 h-3 text-[#00D6FF]" />
+              </span>
+              <span>SCROLL TO EXPLORE STORY</span>
+            </div>
           </div>
         </div>
 

@@ -69,7 +69,7 @@ export default function Navigation() {
           </a>
 
           {/* Center: Minimalist navigation links: Work, Services, Process, About, Contact */}
-          <nav className="hidden md:flex items-center gap-7 lg:gap-9 text-[13px] font-normal tracking-wide text-white/60" aria-label="Main Navigation">
+          <nav className="nav-links-desktop" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <a
                 key={link.label}
