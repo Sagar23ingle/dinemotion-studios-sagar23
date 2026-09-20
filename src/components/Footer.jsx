@@ -29,18 +29,15 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#050505] border-t border-white/[0.08] pt-20 pb-12 text-white/50">
+    <footer className="bg-black/75 backdrop-blur-xl border-t border-white/[0.08] pt-20 pb-12 text-white/50 relative z-10">
       <div className="container">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/[0.08]">
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
-              <span className="font-display font-medium text-2xl tracking-[0.16em] text-white">
-                DINEMOTION
-              </span>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-white/60 px-1.5 py-0.5 rounded border border-white/10">
-                STUDIOS
+              <span className="font-display font-semibold text-2xl tracking-[0.16em] text-white">
+                DINEMOTION STUDIOS
               </span>
             </div>
             <p className="text-sm text-white/60 max-w-sm font-light leading-relaxed">

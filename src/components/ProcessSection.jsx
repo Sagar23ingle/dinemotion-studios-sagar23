@@ -57,7 +57,7 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section id="process" className="section bg-[#050505] border-t border-white/[0.08]">
+    <section id="process" className="section bg-transparent border-t border-white/[0.08]">
       <div className="container" ref={containerRef}>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">

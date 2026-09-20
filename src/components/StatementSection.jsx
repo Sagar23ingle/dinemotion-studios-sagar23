@@ -24,7 +24,7 @@ export default function StatementSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative z-10 py-24 md:py-36 bg-[#050505] overflow-hidden"
+      className="relative z-10 py-24 md:py-36 bg-transparent overflow-hidden"
     >
       <div className="container">
         {/* Editorial Eyebrow */}
@@ -40,8 +40,8 @@ export default function StatementSection() {
           </span>
         </div>
 
-        {/* Minimal Apple Editorial Headline */}
-        <div className="max-w-4xl">
+        {/* Minimal Apple Editorial Headline Card */}
+        <div className="max-w-4xl p-8 sm:p-12 md:p-14 rounded-3xl bg-black/45 backdrop-blur-xl border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
           <h2
             className="font-display font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.08] tracking-[-0.028em] text-[#f5f5f7] mb-10 transition-all duration-700 delay-100 ease-out"
             style={{
@@ -49,13 +49,13 @@ export default function StatementSection() {
               transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
             }}
           >
-            <span className="block text-[#86868b]">
+            <span className="block text-[#a1a1a6]">
               IDEAS DESERVE
             </span>
             <span className="block text-white">
               MORE THAN
             </span>
-            <span className="block text-[#f5f5f7]">
+            <span className="block text-gradient-cyan">
               ORDINARY EXECUTION.
             </span>
           </h2>
@@ -69,13 +69,13 @@ export default function StatementSection() {
             }}
           >
             <div className="md:col-span-4">
-              <span className="text-[11px] font-mono tracking-wider text-[#6e6e73] uppercase">
+              <span className="text-[11px] font-mono tracking-wider text-[#00D6FF] uppercase">
                 THE APPROACH
               </span>
             </div>
             <div className="md:col-span-8">
-              <p className="text-base sm:text-lg font-light text-[#a1a1a6] leading-relaxed">
-                We combine design, technology and visual storytelling to create digital experiences and content built around <span className="text-white font-normal">real business goals</span>.
+              <p className="text-base sm:text-lg font-light text-white/85 leading-relaxed">
+                We combine design, technology and visual storytelling to create digital experiences and content built around <span className="text-white font-medium">real business goals</span>.
               </p>
             </div>
           </div>

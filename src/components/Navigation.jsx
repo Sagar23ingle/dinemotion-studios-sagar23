@@ -54,7 +54,7 @@ export default function Navigation() {
         }}
       >
         <div className="container flex items-center justify-between">
-          {/* Left: Simple text logo "DINEMOTION" in clean, medium font */}
+          {/* Left: Logo "DINEMOTION STUDIOS" in clean, premium font */}
           <a
             href="#"
             className="flex items-center gap-2 group focus:outline-none"
@@ -63,8 +63,8 @@ export default function Navigation() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <span className="font-display font-medium text-[15px] sm:text-[16px] tracking-[0.18em] text-white/95 group-hover:text-[#00D6FF] transition-colors duration-300">
-              DINEMOTION
+            <span className="font-display font-semibold text-[15px] sm:text-[17px] tracking-[0.18em] text-white group-hover:text-[#00D6FF] transition-colors duration-300 drop-shadow-md">
+              DINEMOTION STUDIOS
             </span>
           </a>
 

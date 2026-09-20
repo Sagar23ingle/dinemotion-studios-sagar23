@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section bg-[#050505] border-t border-white/[0.08]">
+    <section id="about" className="section bg-transparent border-t border-white/[0.08]">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-4">

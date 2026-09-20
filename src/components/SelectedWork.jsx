@@ -159,7 +159,7 @@ export default function SelectedWork() {
   }, [isDesktop]);
 
   return (
-    <section id="work" className="relative bg-[#050505] border-t border-white/[0.08]">
+    <section id="work" className="relative bg-transparent border-t border-white/[0.08]">
       <div
         ref={containerRef}
         className="relative w-full"

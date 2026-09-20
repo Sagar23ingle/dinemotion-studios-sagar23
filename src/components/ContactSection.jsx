@@ -32,7 +32,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section bg-[#050505] border-t border-white/[0.08]">
+    <section id="contact" className="section bg-transparent border-t border-white/[0.08]">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Heading & Coordinates */}

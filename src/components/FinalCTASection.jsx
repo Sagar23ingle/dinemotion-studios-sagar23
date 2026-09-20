@@ -11,13 +11,14 @@ export default function FinalCTASection() {
   };
 
   return (
-    <section className="relative min-h-[65vh] flex items-center justify-center bg-[#050505] border-t border-white/[0.08] overflow-hidden py-24">
+    <section className="relative min-h-[65vh] flex items-center justify-center bg-transparent border-t border-white/[0.08] overflow-hidden py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-[radial-gradient(circle,rgba(0,80,255,0.18)_0%,rgba(0,214,255,0.06)_50%,rgba(5,5,5,0)_70%)] blur-[100px] rounded-full animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-[radial-gradient(circle,rgba(0,80,255,0.22)_0%,rgba(0,214,255,0.08)_50%,transparent_70%)] blur-[100px] rounded-full animate-pulse" />
       </div>
 
       <div className="container relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
-        <span className="section-label mb-5">
+        <div className="w-full flex flex-col items-center p-8 sm:p-12 md:p-14 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+          <span className="section-label mb-5">
           INITIATE COLLABORATION
         </span>
 
@@ -41,6 +42,7 @@ export default function FinalCTASection() {
         <p className="mt-6 text-[11px] font-mono tracking-wider text-white/50 uppercase">
           ESTIMATED PROJECT KICKOFF IN 5–7 BUSINESS DAYS
         </p>
+        </div>
       </div>
     </section>
   );

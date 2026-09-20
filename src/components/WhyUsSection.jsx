@@ -25,14 +25,14 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section className="section bg-[#050505] border-t border-white/[0.08]">
+    <section className="section bg-transparent border-t border-white/[0.08]">
       <div className="container">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <span className="section-label">STUDIO PRINCIPLES</span>
             <h2 className="section-heading-large !mb-0 text-white">
-              WHY DINEMOTION.
+              WHY DINEMOTION STUDIOS.
             </h2>
           </div>
           <p className="max-w-sm text-sm text-white/60 leading-relaxed font-light">

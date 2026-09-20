@@ -190,7 +190,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="section bg-[#050505]">
+    <section id="services" className="section bg-transparent border-t border-white/[0.08]">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>

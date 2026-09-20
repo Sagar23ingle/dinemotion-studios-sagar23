@@ -6,7 +6,7 @@ export default function ShowreelSection() {
   const [isMuted, setIsMuted] = useState(true);
 
   return (
-    <section className="section bg-[#070709] border-t border-white/[0.08] overflow-hidden">
+    <section className="section bg-transparent border-t border-white/[0.08] overflow-hidden">
       <div className="container">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -14,7 +14,7 @@ export default function ShowreelSection() {
             CINEMATIC SHOWCASE
           </span>
           <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-white tracking-tight mb-4">
-            SEE DINEMOTION IN MOTION.
+            SEE DINEMOTION STUDIOS IN MOTION.
           </h2>
           <p className="text-base sm:text-lg text-[#a1a1a6]">
             A compilation of high-fidelity visual direction, motion graphics, and digital choreography.
