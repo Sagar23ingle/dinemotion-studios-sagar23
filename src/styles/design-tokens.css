@@ -1,0 +1,74 @@
+:root {
+  /* Color Palette - Premium Creative Technology Dark Mode */
+  --bg-primary: #050505;
+  --bg-secondary: #0A0A0C;
+  --bg-tertiary: #101014;
+  --bg-card: rgba(255, 255, 255, 0.028);
+  --bg-card-hover: rgba(255, 255, 255, 0.055);
+  --bg-elevated: #121217;
+
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-secondary: rgba(255, 255, 255, 0.60);
+  --text-muted: #86868b;
+  --text-dim: #515154;
+
+  /* Accent Colors */
+  --accent-primary: #0050FF;
+  --accent-secondary: #00D6FF;
+  --accent-gradient: linear-gradient(135deg, #0050FF 0%, #00D6FF 100%);
+  --accent-glow: rgba(0, 80, 255, 0.25);
+  --cyan-glow: rgba(0, 214, 255, 0.2);
+
+  /* Legacy aliases for backward compatibility */
+  --accent: #0050FF;
+  --accent-hover: #1f6aff;
+  --accent-subtle: rgba(0, 80, 255, 0.12);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.24);
+
+  /* Typography - Clean Apple SF / Inter System */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+
+  /* Refined, Minimal Apple-Inspired Type Scale */
+  --fs-hero: clamp(2.25rem, 5vw, 4.25rem);
+  --fs-hero-lead: clamp(1rem, 1.4vw, 1.2rem);
+  --fs-display-1: clamp(1.85rem, 3.5vw, 3rem);
+  --fs-display-2: clamp(1.45rem, 2.5vw, 2.2rem);
+  --fs-heading-1: clamp(1.25rem, 1.8vw, 1.75rem);
+  --fs-heading-2: clamp(1rem, 1.3vw, 1.3rem);
+  --fs-body-lg: 1.0625rem;
+  --fs-body: 0.9375rem;
+  --fs-sm: 0.8125rem;
+  --fs-xs: 0.6875rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.875rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5rem;
+  --space-3xl: 7.5rem;
+
+  /* Max Widths */
+  --max-width-content: 1240px;
+  --max-width-narrow: 840px;
+  --max-width-wide: 1400px;
+
+  /* Transitions & Curves */
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+  --duration-slow: 0.6s;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
