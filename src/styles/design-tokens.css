@@ -34,12 +34,12 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
 
   /* Refined, Minimal Apple-Inspired Type Scale */
-  --fs-hero: clamp(2.25rem, 5vw, 4.25rem);
-  --fs-hero-lead: clamp(1rem, 1.4vw, 1.2rem);
-  --fs-display-1: clamp(1.85rem, 3.5vw, 3rem);
-  --fs-display-2: clamp(1.45rem, 2.5vw, 2.2rem);
-  --fs-heading-1: clamp(1.25rem, 1.8vw, 1.75rem);
-  --fs-heading-2: clamp(1rem, 1.3vw, 1.3rem);
+  --fs-hero: clamp(2rem, 5vw, 4.25rem);
+  --fs-hero-lead: clamp(0.9375rem, 1.4vw, 1.2rem);
+  --fs-display-1: clamp(1.65rem, 3.5vw, 3rem);
+  --fs-display-2: clamp(1.35rem, 2.5vw, 2.2rem);
+  --fs-heading-1: clamp(1.15rem, 1.8vw, 1.75rem);
+  --fs-heading-2: clamp(0.9375rem, 1.3vw, 1.3rem);
   --fs-body-lg: 1.0625rem;
   --fs-body: 0.9375rem;
   --fs-sm: 0.8125rem;

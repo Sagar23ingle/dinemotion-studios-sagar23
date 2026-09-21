@@ -28,9 +28,9 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/[0.08] flex items-center gap-3 text-xs font-mono text-white/50">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
-              <span className="tracking-wider uppercase">
+            <div className="mt-8 pt-6 border-t border-white/[0.08] flex items-start sm:items-center gap-3 text-xs font-mono text-white/50">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF] flex-shrink-0 mt-1.5 sm:mt-0" />
+              <span className="tracking-wider uppercase break-words">
                 "We design, build and produce digital experiences that help brands move forward."
               </span>
             </div>

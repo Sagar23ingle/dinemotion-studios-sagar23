@@ -5,7 +5,9 @@ export default function SelectedWork() {
   const containerRef = useRef(null);
   const trackRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(() => 
+    typeof window !== 'undefined' ? window.innerWidth >= 1024 : false
+  );
 
   // Exactly 2 Website Projects and 1 Web Application Project
   const projects = [
@@ -19,7 +21,7 @@ export default function SelectedWork() {
       icon: Globe,
       color: '#00D6FF',
       visual: (
-        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#101014] to-[#050505] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#101014] to-[#050505] border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 pb-3 relative z-10">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
@@ -28,11 +30,11 @@ export default function SelectedWork() {
             <span className="text-[11px] font-mono text-[#00D6FF]">01 / 03</span>
           </div>
 
-          <div className="relative z-10 my-auto py-4">
+          <div className="relative z-10 my-auto py-3 sm:py-4">
             <span className="text-[10px] font-mono text-[#6e6e73] uppercase tracking-widest block mb-1.5">
               SPATIAL MONOGRAPH
             </span>
-            <h5 className="font-display text-xl sm:text-2xl font-semibold text-white tracking-tight mb-2">
+            <h5 className="font-display text-lg sm:text-2xl font-semibold text-white tracking-tight mb-2">
               Form Follows Frictionless Motion.
             </h5>
             <div className="h-[1px] w-12 bg-[#0050FF] mb-3" />
@@ -41,7 +43,7 @@ export default function SelectedWork() {
             </p>
           </div>
 
-          <div className="flex items-center justify-between pt-3 border-t border-white/10 relative z-10 text-[11px] font-mono text-white/50">
+          <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-white/10 relative z-10 text-[10px] sm:text-[11px] font-mono text-white/50">
             <span>DESIGN & DEVELOPMENT</span>
             <span className="text-[#00D6FF] group-hover:text-white transition-colors">ACTIVE PROTOTYPE</span>
           </div>
@@ -58,7 +60,7 @@ export default function SelectedWork() {
       icon: Layout,
       color: '#0050FF',
       visual: (
-        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#121016] to-[#050505] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#121016] to-[#050505] border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 pb-3 relative z-10">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#0050FF] shadow-[0_0_8px_#0050FF]" />
@@ -67,11 +69,11 @@ export default function SelectedWork() {
             <span className="text-[11px] font-mono text-[#0050FF]">02 / 03</span>
           </div>
 
-          <div className="relative z-10 my-auto py-4">
+          <div className="relative z-10 my-auto py-3 sm:py-4">
             <span className="text-[10px] font-mono text-[#6e6e73] uppercase tracking-widest block mb-1.5">
               DIGITAL ATELIER
             </span>
-            <h5 className="font-display text-xl sm:text-2xl font-semibold text-white tracking-tight mb-2">
+            <h5 className="font-display text-lg sm:text-2xl font-semibold text-white tracking-tight mb-2">
               Tactile Luxury at Digital Scale.
             </h5>
             <div className="h-[1px] w-12 bg-[#0050FF] mb-3" />
@@ -80,7 +82,7 @@ export default function SelectedWork() {
             </p>
           </div>
 
-          <div className="flex items-center justify-between pt-3 border-t border-white/10 relative z-10 text-[11px] font-mono text-white/50">
+          <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-white/10 relative z-10 text-[10px] sm:text-[11px] font-mono text-white/50">
             <span>COMMERCE & STORYTELLING</span>
             <span className="text-[#00D6FF] group-hover:text-white transition-colors">ACTIVE PROTOTYPE</span>
           </div>
@@ -97,7 +99,7 @@ export default function SelectedWork() {
       icon: Code2,
       color: '#00D6FF',
       visual: (
-        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#0c1218] to-[#050505] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#0c1218] to-[#050505] border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 pb-3 relative z-10">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
@@ -106,11 +108,11 @@ export default function SelectedWork() {
             <span className="text-[11px] font-mono text-[#00D6FF]">03 / 03</span>
           </div>
 
-          <div className="relative z-10 my-auto py-4">
+          <div className="relative z-10 my-auto py-3 sm:py-4">
             <span className="text-[10px] font-mono text-[#6e6e73] uppercase tracking-widest block mb-1.5">
               CLOUD PLATFORM
             </span>
-            <h5 className="font-display text-xl sm:text-2xl font-semibold text-white tracking-tight mb-2">
+            <h5 className="font-display text-lg sm:text-2xl font-semibold text-white tracking-tight mb-2">
               Complex Workflows, Rendered Effortless.
             </h5>
             <div className="h-[1px] w-12 bg-[#00D6FF] mb-3" />
@@ -119,7 +121,7 @@ export default function SelectedWork() {
             </p>
           </div>
 
-          <div className="flex items-center justify-between pt-3 border-t border-white/10 relative z-10 text-[11px] font-mono text-white/50">
+          <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-white/10 relative z-10 text-[10px] sm:text-[11px] font-mono text-white/50">
             <span>FULL-STACK APPLICATION</span>
             <span className="text-[#00D6FF] group-hover:text-white transition-colors">ACTIVE PROTOTYPE</span>
           </div>
@@ -263,11 +265,11 @@ export default function SelectedWork() {
             </div>
           ) : (
             /* Mobile Elegant Vertical Stack */
-            <div className="container flex flex-col gap-8">
+            <div className="container flex flex-col gap-6 sm:gap-8">
               {projects.map((project) => (
                 <div
                   key={project.num}
-                  className="rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-6 flex flex-col gap-5 shadow-2xl"
+                  className="rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-5 sm:p-6 flex flex-col gap-5 shadow-2xl"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-mono font-medium text-[#00D6FF] px-2.5 py-0.5 rounded-full bg-[#0050FF]/15 border border-[#00D6FF]/30">
@@ -279,7 +281,7 @@ export default function SelectedWork() {
                   </div>
 
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-white mb-2">
+                    <h3 className="font-display text-base sm:text-lg font-semibold text-white mb-2 break-words">
                       {project.title}
                     </h3>
                     <p className="text-xs text-white/60 leading-relaxed mb-4 font-light">
@@ -297,7 +299,7 @@ export default function SelectedWork() {
                     </div>
                   </div>
 
-                  <div className="h-[270px]">
+                  <div className="min-h-[250px] sm:h-[270px]">
                     {project.visual}
                   </div>
 

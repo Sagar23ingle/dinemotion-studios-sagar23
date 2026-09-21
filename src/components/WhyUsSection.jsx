@@ -45,7 +45,7 @@ export default function WhyUsSection() {
           {principles.map((p) => (
             <div
               key={p.num}
-              className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between group shadow-xl"
+              className="p-5 sm:p-7 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between group shadow-xl"
             >
               <div>
                 <span className="text-2xl font-display font-semibold text-[#00D6FF] block mb-4">

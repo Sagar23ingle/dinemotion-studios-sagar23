@@ -36,14 +36,14 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
-              <span className="font-display font-semibold text-2xl tracking-[0.16em] text-white">
+              <span className="font-display font-semibold text-lg sm:text-xl md:text-2xl tracking-[0.10em] sm:tracking-[0.16em] text-white break-words">
                 DINEMOTION STUDIOS
               </span>
             </div>
             <p className="text-sm text-white/60 max-w-sm font-light leading-relaxed">
               Creative technology and visual media studio combining design, engineering, and cinematic storytelling for modern brands.
             </p>
-            <div className="pt-2 text-xs font-mono text-[#6e6e73]">
+            <div className="pt-2 text-xs font-mono text-[#6e6e73] break-words">
               "We design, build and produce digital experiences that help brands move forward."
             </div>
           </div>
@@ -104,16 +104,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#6e6e73]">
-          <div>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#6e6e73] text-center sm:text-left">
+          <div className="break-words">
             © {new Date().getFullYear()} DINEMOTION STUDIOS. ALL RIGHTS RESERVED.
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6">
             <span>LUXURY CREATIVE TECHNOLOGY</span>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 text-white hover:text-[#00D6FF] transition-colors"
+              className="flex items-center gap-1.5 text-white hover:text-[#00D6FF] transition-colors cursor-pointer"
             >
               <span>BACK TO TOP</span>
               <ArrowUp className="w-3.5 h-3.5" />

@@ -17,31 +17,31 @@ export default function FinalCTASection() {
       </div>
 
       <div className="container relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
-        <div className="w-full flex flex-col items-center p-8 sm:p-12 md:p-14 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+        <div className="w-full flex flex-col items-center p-5 sm:p-10 md:p-14 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
           <span className="section-label mb-5">
-          INITIATE COLLABORATION
-        </span>
+            INITIATE COLLABORATION
+          </span>
 
-        <h2 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl tracking-[-0.035em] text-white leading-tight mb-2 text-glow">
-          HAVE AN IDEA?
-        </h2>
+          <h2 className="font-display font-semibold text-3xl sm:text-5xl md:text-6xl tracking-[-0.035em] text-white leading-tight mb-2 text-glow">
+            HAVE AN IDEA?
+          </h2>
 
-        <h3 className="font-display font-semibold text-3xl sm:text-5xl md:text-6xl tracking-[-0.03em] text-gradient-cyan leading-tight mb-8">
-          LET'S MAKE IT MOVE.
-        </h3>
+          <h3 className="font-display font-semibold text-2xl sm:text-5xl md:text-6xl tracking-[-0.03em] text-gradient-cyan leading-tight mb-8">
+            LET'S MAKE IT MOVE.
+          </h3>
 
-        <a
-          href="#contact"
-          onClick={scrollToContact}
-          className="btn-gradient text-sm px-7 py-3.5"
-        >
-          <span>Start a Project</span>
-          <ArrowRight className="w-4 h-4 btn-arrow text-[#00D6FF]" />
-        </a>
+          <a
+            href="#contact"
+            onClick={scrollToContact}
+            className="btn-gradient text-sm px-7 py-3.5 w-full sm:w-auto justify-center"
+          >
+            <span>Start a Project</span>
+            <ArrowRight className="w-4 h-4 btn-arrow text-[#00D6FF]" />
+          </a>
 
-        <p className="mt-6 text-[11px] font-mono tracking-wider text-white/50 uppercase">
-          ESTIMATED PROJECT KICKOFF IN 5–7 BUSINESS DAYS
-        </p>
+          <p className="mt-6 text-[10px] sm:text-[11px] font-mono tracking-wider text-white/50 uppercase break-words max-w-full">
+            ESTIMATED PROJECT KICKOFF IN 5–7 BUSINESS DAYS
+          </p>
         </div>
       </div>
     </section>

@@ -47,18 +47,18 @@ export default function ContactSection() {
               </p>
 
               {/* Studio Details */}
-              <div className="p-5 rounded-2xl bg-[#0A0A0C] border border-white/10 space-y-3.5 text-xs font-mono text-white/60 mb-6 shadow-xl">
-                <div className="flex items-center gap-2.5">
-                  <Mail className="w-3.5 h-3.5 text-[#00D6FF]" />
-                  <span>INQUIRIES: <strong className="text-white font-mono">[hello@dinemotion.com]</strong></span>
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#0A0A0C] border border-white/10 space-y-3.5 text-xs font-mono text-white/60 mb-6 shadow-xl">
+                <div className="flex items-start sm:items-center gap-2.5">
+                  <Mail className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
+                  <span className="break-all">INQUIRIES: <strong className="text-white font-mono">[hello@dinemotion.com]</strong></span>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <Clock className="w-3.5 h-3.5 text-[#00D6FF]" />
+                <div className="flex items-start sm:items-center gap-2.5">
+                  <Clock className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
                   <span>RESPONSE TIME: <span className="text-white">Within 24 hours</span></span>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#00D6FF]" />
-                  <span>STUDIO: <span className="text-white">[Global Remote & On-Site]</span></span>
+                <div className="flex items-start sm:items-center gap-2.5">
+                  <MapPin className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
+                  <span>STUDIO: <span className="text-white break-words">[Global Remote & On-Site]</span></span>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function ContactSection() {
 
           {/* Right Column: Premium Minimal Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-10 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
+            <div className="p-5 sm:p-8 md:p-10 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
               {isSubmitted ? (
                 <div className="py-12 text-center flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#0050FF]/20 border border-[#00D6FF]/40 text-[#00D6FF] flex items-center justify-center mb-1">

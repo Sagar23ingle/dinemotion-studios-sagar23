@@ -226,7 +226,7 @@ export default function BackgroundCanvas() {
       {/* Global full-site Canvas rendering scroll animation */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none z-10"
+        className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none z-10 max-w-full"
       />
 
       {/* Cinematic Dark Vignette & Ambient Translucent Overlays */}

@@ -63,7 +63,7 @@ export default function Navigation() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <span className="font-display font-semibold text-[15px] sm:text-[17px] tracking-[0.18em] text-white group-hover:text-[#00D6FF] transition-colors duration-300 drop-shadow-md">
+            <span className="font-display font-semibold text-[13px] sm:text-[15px] md:text-[17px] tracking-[0.10em] sm:tracking-[0.18em] text-white group-hover:text-[#00D6FF] transition-colors duration-300 drop-shadow-md whitespace-nowrap">
               DINEMOTION STUDIOS
             </span>
           </a>
@@ -121,7 +121,7 @@ export default function Navigation() {
 
       {/* Fullscreen Mobile Navigation Drawer */}
       <div
-        className={`fixed inset-0 z-40 bg-[#050505]/98 backdrop-blur-3xl md:hidden flex flex-col justify-between p-8 pt-28 transition-all duration-500 ${
+        className={`fixed inset-0 z-40 bg-[#050505]/98 backdrop-blur-3xl md:hidden flex flex-col justify-between p-6 sm:p-8 pt-24 sm:pt-28 overflow-y-auto max-w-full transition-all duration-500 ${
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >

@@ -45,11 +45,11 @@ export default function CapabilitiesSection() {
                   isAnyHovered && !isHovered ? 'opacity-30' : 'opacity-100'
                 }`}
               >
-                <div className="flex items-baseline gap-4 sm:gap-8">
-                  <span className="text-xs font-mono text-[#6e6e73] group-hover:text-[#00D6FF] transition-colors">
+                <div className="flex items-baseline gap-3 sm:gap-8">
+                  <span className="text-xs font-mono text-[#6e6e73] group-hover:text-[#00D6FF] transition-colors flex-shrink-0">
                     {cap.count}
                   </span>
-                  <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white group-hover:text-[#00D6FF] transition-colors duration-200">
+                  <h3 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white group-hover:text-[#00D6FF] transition-colors duration-200 break-words">
                     {cap.name}
                   </h3>
                 </div>
