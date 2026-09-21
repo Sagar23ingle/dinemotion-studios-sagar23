@@ -14,7 +14,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-14 sm:pb-20 px-3 sm:px-4 z-10">
       <div className="container flex flex-col items-center text-center">
         {/* Subtle glassmorphic card for 100% crisp legibility over the continuous video background */}
-        <div className="max-w-4xl w-full flex flex-col items-center p-4 sm:p-8 md:p-14 rounded-3xl bg-black/40 backdrop-blur-md border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.7)]">
+        <div className="max-w-4xl w-full flex flex-col items-center p-4 sm:p-8 md:p-14 rounded-3xl glass-card border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.7)]">
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[11px] font-mono tracking-wider sm:tracking-widest text-[#a1a1a6] bg-black/60 border border-white/10 backdrop-blur-md mb-5 sm:mb-6 shadow-md max-w-full text-center">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF] flex-shrink-0" />

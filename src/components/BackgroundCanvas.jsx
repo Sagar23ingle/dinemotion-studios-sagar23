@@ -233,18 +233,18 @@ export default function BackgroundCanvas() {
       <div
         className="absolute inset-0 pointer-events-none z-20"
         style={{
-          background: 'linear-gradient(to bottom, rgba(5,5,5,0.45) 0%, rgba(5,5,5,0.25) 35%, rgba(5,5,5,0.3) 70%, rgba(5,5,5,0.65) 100%)'
+          background: 'linear-gradient(to bottom, rgba(5,5,5,0.25) 0%, rgba(5,5,5,0.08) 35%, rgba(5,5,5,0.12) 70%, rgba(5,5,5,0.4) 100%)'
         }}
       />
       <div
         className="absolute inset-0 pointer-events-none z-20"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.15) 0%, rgba(5,5,5,0.7) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.04) 0%, rgba(5,5,5,0.5) 100%)'
         }}
       />
 
-      {/* Floating Reel Frame Status Badge (Bottom Right) */}
-      <div className="fixed bottom-5 right-6 z-30 pointer-events-none hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-black/60 backdrop-blur-md text-[11px] font-mono text-white/70 shadow-lg">
+      {/* Floating Reel Frame Status Badge (Bottom Left, avoiding WhatsApp button on bottom right) */}
+      <div className="fixed bottom-5 left-6 z-30 pointer-events-none hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-black/60 backdrop-blur-md text-[11px] font-mono text-white/70 shadow-lg">
         <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] animate-pulse" />
         <span className="text-white/40 tracking-wider">REEL</span>
         <span className="text-[#00D6FF] font-medium font-mono">

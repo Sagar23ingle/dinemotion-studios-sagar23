@@ -118,7 +118,7 @@ button, input, textarea, select {
   padding-top: clamp(4.5rem, 7.5vw, 7rem);
   padding-bottom: clamp(4.5rem, 7.5vw, 7rem);
   border-top: 1px solid var(--border-subtle);
-  background-color: #050505;
+  background-color: transparent;
 }
 
 .section-label {
@@ -569,14 +569,50 @@ button, input, textarea, select {
 .text-cyan-400 { color: #00D6FF; }
 .text-transparent { color: transparent; }
 
+/* Full Glassify System */
+.glass-card {
+  background: rgba(10, 10, 14, 0.40) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+}
+
+.glass-card:hover {
+  background: rgba(14, 14, 20, 0.52) !important;
+  border-color: rgba(255, 255, 255, 0.20) !important;
+}
+
+.glass-card-subtle {
+  background: rgba(8, 8, 12, 0.32) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
 .bg-white { background-color: #ffffff; }
 .bg-black { background-color: #000000; }
-.bg-\[\#050505\] { background-color: #050505; }
-.bg-\[\#070709\] { background-color: #050505; } /* mapped to pure #050505 */
-.bg-\[\#0A0A0C\] { background-color: #0A0A0C; }
-.bg-\[\#0c0c10\] { background-color: #0A0A0C; }
-.bg-\[\#0e0e14\] { background-color: #101014; }
-.bg-\[\#121216\] { background-color: #121217; }
+.bg-\[\#050505\] { background-color: rgba(5, 5, 5, 0.7); }
+.bg-\[\#070709\] { background-color: rgba(7, 7, 9, 0.7); }
+.bg-\[\#0A0A0C\] { 
+  background-color: rgba(10, 10, 14, 0.42); 
+  backdrop-filter: blur(24px); 
+  -webkit-backdrop-filter: blur(24px); 
+}
+.bg-\[\#0c0c10\] { 
+  background-color: rgba(12, 12, 16, 0.42); 
+  backdrop-filter: blur(24px); 
+  -webkit-backdrop-filter: blur(24px); 
+}
+.bg-\[\#0e0e14\] { 
+  background-color: rgba(14, 14, 20, 0.45); 
+  backdrop-filter: blur(24px); 
+  -webkit-backdrop-filter: blur(24px); 
+}
+.bg-\[\#121216\] { 
+  background-color: rgba(18, 18, 22, 0.45); 
+  backdrop-filter: blur(24px); 
+  -webkit-backdrop-filter: blur(24px); 
+}
 .bg-\[\#0050FF\] { background-color: #0050FF; }
 .bg-\[\#00D6FF\] { background-color: #00D6FF; }
 .bg-\[\#2997ff\] { background-color: #0050FF; }

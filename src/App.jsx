@@ -13,12 +13,16 @@ import FinalCTASection from './components/FinalCTASection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function App() {
   return (
     <div className="site-wrapper bg-transparent text-[#f5f5f7] relative">
       {/* Global full-site cinematic background frame video that scrubs smoothly from starting to end of the website on scroll */}
       <BackgroundCanvas />
+
+      {/* Floating quick-access WhatsApp button */}
+      <WhatsAppButton />
 
       {/* Desktop subtle custom cursor */}
       <CustomCursor />

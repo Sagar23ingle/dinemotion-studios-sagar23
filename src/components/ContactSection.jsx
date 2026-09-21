@@ -25,10 +25,26 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Directly open user's mail client targeted to hello.dinemotionstudio@gmail.com
+    const subject = encodeURIComponent(`Project Inquiry: ${formData.service} — ${formData.name}`);
+    const body = encodeURIComponent(
+      `Hello Dinemotion Studios,\n\n` +
+      `I would like to inquire about a project:\n\n` +
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Company / Brand: ${formData.company || 'N/A'}\n` +
+      `Service Requested: ${formData.service}\n\n` +
+      `Project Details:\n${formData.details}\n\n` +
+      `Looking forward to hearing from you.`
+    );
+
+    window.location.href = `mailto:hello.dinemotionstudio@gmail.com?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 500);
+    }, 600);
   };
 
   return (
@@ -46,16 +62,33 @@ export default function ContactSection() {
                 Whether you need a flagship website, an interactive product application, or a commercial film, we would love to hear your vision.
               </p>
 
-              {/* Studio Details */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-[#0A0A0C] border border-white/10 space-y-3 text-xs font-mono text-white/60 mb-6 shadow-xl">
-                <div className="flex items-start sm:items-center gap-2.5">
+              {/* Studio Details with Direct WhatsApp & Gmail Links */}
+              <div className="p-4 sm:p-5 rounded-2xl glass-card space-y-3.5 text-xs font-mono text-white/70 mb-6 shadow-xl">
+                <a
+                  href="mailto:hello.dinemotionstudio@gmail.com"
+                  className="flex items-start sm:items-center gap-2.5 group hover:text-[#00D6FF] transition-colors"
+                >
                   <Mail className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
-                  <span className="break-all">INQUIRIES: <strong className="text-white font-mono">[hello@dinemotion.com]</strong></span>
-                </div>
+                  <span className="break-all">GMAIL: <strong className="text-white group-hover:text-[#00D6FF] transition-colors font-mono underline decoration-white/20">hello.dinemotionstudio@gmail.com</strong></span>
+                </a>
+
+                <a
+                  href="https://wa.me/919209469877?text=Hello%20Dinemotion%20Studios%2C%20I%20would%20like%20to%20inquire%20about%20a%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start sm:items-center gap-2.5 group hover:text-[#25D366] transition-colors"
+                >
+                  <span className="w-3.5 h-3.5 flex items-center justify-center text-[#25D366] flex-shrink-0 mt-0.5 sm:mt-0">
+                    <svg className="w-3.5 h-3.5 fill-[#25D366]" viewBox="0 0 24 24"><path d="M17.507 14.307l-.009.075c-.286.99-1.206 1.776-2.222 1.896-.744.088-1.748-.093-3.238-.802-1.992-.95-3.522-2.735-4.385-3.957-.468-.662-.843-1.464-.843-2.235 0-.96.425-1.758.983-2.316.208-.208.455-.316.717-.316.143 0 .284.032.413.093.425.2.784.992.936 1.375.127.318.172.585.04.832-.08.152-.18.293-.284.417-.116.138-.22.25-.333.375-.125.138-.07.317.022.476.545.94 1.34 1.734 2.278 2.279.16.092.339.146.477.022.124-.112.237-.217.374-.333.125-.104.266-.204.418-.284.247-.132.514-.087.832.04.383.152 1.175.511 1.375.936.06.129.093.27.093.413 0 .262-.108.509-.316.717zM12 2C6.477 2 2 6.477 2 12c0 1.946.557 3.762 1.523 5.302L2.2 21.8l4.633-1.305C8.32 21.417 10.103 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.636 0-3.17-.468-4.48-1.28l-.32-.198-3.08.868.867-3.08-.198-.32C4.168 14.97 3.7 13.536 3.7 12c0-4.577 3.723-8.3 8.3-8.3s8.3 3.723 8.3 8.3-3.723 8.3-8.3 8.3z"/></svg>
+                  </span>
+                  <span>WHATSAPP: <strong className="text-white group-hover:text-[#25D366] transition-colors font-mono underline decoration-white/20">+91 9209469877</strong></span>
+                </a>
+
                 <div className="flex items-start sm:items-center gap-2.5">
                   <Clock className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
                   <span>RESPONSE TIME: <span className="text-white">Within 24 hours</span></span>
                 </div>
+
                 <div className="flex items-start sm:items-center gap-2.5">
                   <MapPin className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
                   <span>STUDIO: <span className="text-white break-words">[Global Remote & On-Site]</span></span>
@@ -70,7 +103,7 @@ export default function ContactSection() {
 
           {/* Right Column: Premium Minimal Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-4 sm:p-8 md:p-10 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
+            <div className="p-4 sm:p-8 md:p-10 rounded-3xl glass-card shadow-2xl relative overflow-hidden">
               {isSubmitted ? (
                 <div className="py-12 text-center flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#0050FF]/20 border border-[#00D6FF]/40 text-[#00D6FF] flex items-center justify-center mb-1">

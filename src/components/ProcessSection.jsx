@@ -76,7 +76,7 @@ export default function ProcessSection() {
         <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Sticky Progress Overview (Desktop) */}
           <div className="hidden lg:block lg:col-span-4 sticky top-32">
-            <div className="p-6 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+            <div className="p-6 rounded-2xl glass-card border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
               <span className="text-[11px] font-mono text-[#6e6e73] uppercase tracking-wider block mb-3">
                 ACTIVE PHASE
               </span>
@@ -135,8 +135,8 @@ export default function ProcessSection() {
                   <div
                     className={`p-4 sm:p-7 rounded-2xl border transition-all duration-300 ${
                       isActive
-                        ? 'bg-[#0A0A0C] border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.7)]'
-                        : 'bg-[#0A0A0C]/60 border-white/[0.05] hover:border-white/10'
+                        ? 'glass-card border-[#00D6FF]/40 shadow-[0_16px_40px_rgba(0,0,0,0.7)]'
+                        : 'glass-card-subtle border-white/[0.06] hover:border-white/15'
                     }`}
                   >
                     <div className="flex items-center gap-2 mb-2">

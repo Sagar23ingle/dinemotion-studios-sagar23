@@ -22,7 +22,7 @@ export default function ShowreelSection() {
         </div>
 
         {/* Large Showreel Cinema Frame */}
-        <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 bg-[#0c0c10] shadow-[0_24px_80px_rgba(0,0,0,0.8)] aspect-[16/9] sm:aspect-[21/9] flex items-center justify-center group">
+        <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 glass-card shadow-[0_24px_80px_rgba(0,0,0,0.8)] aspect-[16/9] sm:aspect-[21/9] flex items-center justify-center group">
           {/* Ambient Glow Background */}
           <div className="absolute inset-0 bg-gradient-to-tr from-[#2997ff]/10 via-[#070709]/80 to-[#ff3b30]/5 pointer-events-none" />
 

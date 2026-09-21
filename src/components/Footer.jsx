@@ -21,15 +21,15 @@ export default function Footer() {
   ];
 
   const socials = [
-    { label: 'TWITTER / X', href: '#' },
+    { label: 'WHATSAPP', href: 'https://wa.me/919209469877' },
+    { label: 'EMAIL DIRECT', href: 'mailto:hello.dinemotionstudio@gmail.com' },
     { label: 'INSTAGRAM', href: '#' },
     { label: 'LINKEDIN', href: '#' },
-    { label: 'VIMEO', href: '#' },
-    { label: 'GITHUB', href: '#' },
+    { label: 'TWITTER / X', href: '#' },
   ];
 
   return (
-    <footer className="bg-black/75 backdrop-blur-xl border-t border-white/[0.08] pt-14 sm:pt-20 pb-10 sm:pb-12 text-white/50 relative z-10 px-3 sm:px-4">
+    <footer className="bg-black/35 backdrop-blur-2xl border-t border-white/[0.08] pt-14 sm:pt-20 pb-10 sm:pb-12 text-white/50 relative z-10 px-3 sm:px-4">
       <div className="container">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 pb-12 sm:pb-16 border-b border-white/[0.08]">
@@ -43,8 +43,21 @@ export default function Footer() {
             <p className="text-sm text-white/60 max-w-sm font-light leading-relaxed">
               Creative technology and visual media studio combining design, engineering, and cinematic storytelling for modern brands.
             </p>
-            <div className="pt-2 text-xs font-mono text-[#6e6e73] break-words">
-              "We design, build and produce digital experiences that help brands move forward."
+            <div className="flex flex-col gap-1.5 pt-2 text-xs font-mono">
+              <a
+                href="mailto:hello.dinemotionstudio@gmail.com"
+                className="text-[#00D6FF] hover:underline"
+              >
+                hello.dinemotionstudio@gmail.com
+              </a>
+              <a
+                href="https://wa.me/919209469877"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:underline"
+              >
+                WhatsApp: +91 9209469877
+              </a>
             </div>
           </div>
 

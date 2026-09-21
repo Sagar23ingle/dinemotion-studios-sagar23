@@ -21,7 +21,7 @@ export default function SelectedWork() {
       icon: Globe,
       color: '#00D6FF',
       visual: (
-        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#101014] to-[#050505] border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-white/[0.06] to-black/35 backdrop-blur-md border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 pb-3 relative z-10">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
@@ -60,7 +60,7 @@ export default function SelectedWork() {
       icon: Layout,
       color: '#0050FF',
       visual: (
-        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#121016] to-[#050505] border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#0050FF]/10 to-black/35 backdrop-blur-md border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 pb-3 relative z-10">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#0050FF] shadow-[0_0_8px_#0050FF]" />
@@ -99,7 +99,7 @@ export default function SelectedWork() {
       icon: Code2,
       color: '#00D6FF',
       visual: (
-        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#0c1218] to-[#050505] border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+        <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#00D6FF]/10 to-black/35 backdrop-blur-md border border-white/10 p-4 sm:p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
           <div className="flex items-center justify-between border-b border-white/10 pb-3 relative z-10">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
@@ -205,7 +205,7 @@ export default function SelectedWork() {
                 {projects.map((project, idx) => (
                   <div
                     key={project.num}
-                    className="w-[780px] flex-shrink-0 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-8 transition-all duration-300 hover:border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                    className="w-[780px] flex-shrink-0 rounded-3xl glass-card border border-white/[0.08] p-8 transition-all duration-300 hover:border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                     style={{
                       transform: `scale(${1 - Math.abs(scrollProgress - idx * 0.35) * 0.04})`,
                       opacity: Math.max(0.75, 1 - Math.abs(scrollProgress - idx * 0.35) * 0.45)
@@ -269,7 +269,7 @@ export default function SelectedWork() {
               {projects.map((project) => (
                 <div
                   key={project.num}
-                  className="rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 shadow-2xl"
+                  className="rounded-3xl glass-card border border-white/[0.08] p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 shadow-2xl"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-medium text-[#00D6FF] px-2.5 py-0.5 rounded-full bg-[#0050FF]/15 border border-[#00D6FF]/30">

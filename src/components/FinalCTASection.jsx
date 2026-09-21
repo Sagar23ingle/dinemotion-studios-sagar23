@@ -17,7 +17,7 @@ export default function FinalCTASection() {
       </div>
 
       <div className="container relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
-        <div className="w-full flex flex-col items-center p-4 sm:p-10 md:p-14 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+        <div className="w-full flex flex-col items-center p-4 sm:p-10 md:p-14 rounded-3xl glass-card border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
           <span className="section-label mb-4 sm:mb-5">
             INITIATE COLLABORATION
           </span>

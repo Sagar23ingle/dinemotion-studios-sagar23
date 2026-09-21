@@ -26,7 +26,7 @@ export default function ServicesSection() {
         delivery: 'Bespoke'
       },
       visual: (
-        <div className="relative w-full min-h-[300px] sm:h-[380px] rounded-2xl bg-gradient-to-br from-[#101014] to-[#050505] border border-white/10 p-3.5 sm:p-6 overflow-hidden flex flex-col justify-between shadow-2xl group">
+        <div className="relative w-full min-h-[300px] sm:h-[380px] rounded-2xl glass-card-subtle p-3.5 sm:p-6 overflow-hidden flex flex-col justify-between shadow-2xl group">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
           
           <div className="relative z-10 flex items-center justify-between pb-3 border-b border-white/10">
@@ -92,7 +92,7 @@ export default function ServicesSection() {
         delivery: 'Modular'
       },
       visual: (
-        <div className="relative w-full min-h-[300px] sm:h-[380px] rounded-2xl bg-gradient-to-br from-[#101014] to-[#050505] border border-white/10 p-3.5 sm:p-6 overflow-hidden flex flex-col justify-between shadow-2xl group">
+        <div className="relative w-full min-h-[300px] sm:h-[380px] rounded-2xl glass-card-subtle p-3.5 sm:p-6 overflow-hidden flex flex-col justify-between shadow-2xl group">
           <div className="relative z-10 flex items-center justify-between pb-3 border-b border-white/10">
             <div className="flex items-center gap-2">
               <Cpu className="w-3.5 h-3.5 text-[#00D6FF]" />
@@ -102,7 +102,7 @@ export default function ServicesSection() {
           </div>
 
           <div className="relative z-10 my-auto py-2">
-            <div className="p-3 sm:p-4 rounded-xl bg-black/50 border border-white/10 backdrop-blur-md mb-3">
+            <div className="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/10 backdrop-blur-md mb-3">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-mono text-white/60">REACTIVITY PIPELINE</span>
                 <span className="text-[10px] font-mono text-[#00D6FF]">SUB-10MS</span>
@@ -148,7 +148,7 @@ export default function ServicesSection() {
         delivery: 'Broadcast'
       },
       visual: (
-        <div className="relative w-full min-h-[300px] sm:h-[380px] rounded-2xl bg-gradient-to-br from-[#101014] to-[#050505] border border-white/10 p-3.5 sm:p-6 overflow-hidden flex flex-col justify-between shadow-2xl group">
+        <div className="relative w-full min-h-[300px] sm:h-[380px] rounded-2xl glass-card-subtle p-3.5 sm:p-6 overflow-hidden flex flex-col justify-between shadow-2xl group">
           <div className="relative z-10 flex items-center justify-between pb-3 border-b border-white/10">
             <div className="flex items-center gap-2">
               <Film className="w-3.5 h-3.5 text-[#00D6FF]" />
@@ -211,7 +211,7 @@ export default function ServicesSection() {
             return (
               <div
                 key={service.num}
-                className="relative rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-4 sm:p-8 md:p-12 transition-all duration-300 hover:border-white/15 shadow-[0_20px_60px_rgba(0,0,0,0.7)]"
+                className="relative rounded-3xl glass-card p-4 sm:p-8 md:p-12 transition-all duration-300 shadow-[0_20px_60px_rgba(0,0,0,0.7)]"
               >
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center ${isReversed ? 'lg:flex-row-reverse' : ''}`}>
                   <div className={`lg:col-span-7 flex flex-col justify-between ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}>

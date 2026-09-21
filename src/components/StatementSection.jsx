@@ -41,7 +41,7 @@ export default function StatementSection() {
         </div>
 
         {/* Minimal Apple Editorial Headline Card */}
-        <div className="max-w-4xl p-4 sm:p-8 md:p-14 rounded-3xl bg-black/45 backdrop-blur-xl border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+        <div className="max-w-4xl p-4 sm:p-8 md:p-14 rounded-3xl glass-card border border-white/[0.08] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
           <h2
             className="font-display font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.1] tracking-[-0.028em] text-[#f5f5f7] mb-6 sm:mb-10 transition-all duration-700 delay-100 ease-out"
             style={{
