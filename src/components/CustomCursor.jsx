@@ -4,11 +4,21 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Only enable on non-touch devices with fine pointer
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    if (isTouch) return;
+    const checkDesktop = () => {
+      const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      setIsDesktop(!isTouch && window.innerWidth >= 1024);
+    };
+
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop, { passive: true });
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
 
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
@@ -30,9 +40,9 @@ export default function CustomCursor() {
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [isVisible]);
+  }, [isDesktop, isVisible]);
 
-  if (!isVisible) return null;
+  if (!isDesktop || !isVisible) return null;
 
   return (
     <div className="hidden lg:block pointer-events-none fixed inset-0 z-50 overflow-hidden">

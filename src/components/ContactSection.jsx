@@ -32,22 +32,22 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section bg-transparent border-t border-white/[0.08]">
+    <section id="contact" className="section bg-transparent border-t border-white/[0.08] px-3 sm:px-4">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
           {/* Left Column: Heading & Coordinates */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <span className="section-label">GET IN TOUCH</span>
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight mb-4 text-glow">
+              <h2 className="font-display font-semibold text-2xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight mb-3 sm:mb-4 text-glow">
                 LET'S BUILD SOMETHING.
               </h2>
-              <p className="text-sm sm:text-base text-white/60 leading-relaxed mb-8 font-light">
+              <p className="text-xs sm:text-base text-white/60 leading-relaxed mb-6 sm:mb-8 font-light">
                 Whether you need a flagship website, an interactive product application, or a commercial film, we would love to hear your vision.
               </p>
 
               {/* Studio Details */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-[#0A0A0C] border border-white/10 space-y-3.5 text-xs font-mono text-white/60 mb-6 shadow-xl">
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#0A0A0C] border border-white/10 space-y-3 text-xs font-mono text-white/60 mb-6 shadow-xl">
                 <div className="flex items-start sm:items-center gap-2.5">
                   <Mail className="w-3.5 h-3.5 text-[#00D6FF] flex-shrink-0 mt-0.5 sm:mt-0" />
                   <span className="break-all">INQUIRIES: <strong className="text-white font-mono">[hello@dinemotion.com]</strong></span>
@@ -63,14 +63,14 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="text-[11px] font-mono text-[#6e6e73]">
+            <div className="text-[10px] sm:text-[11px] font-mono text-[#6e6e73] mb-4 sm:mb-0">
               DINEMOTION STUDIOS • CONFIDENTIAL & NDA COMPLIANT
             </div>
           </div>
 
           {/* Right Column: Premium Minimal Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-5 sm:p-8 md:p-10 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
+            <div className="p-4 sm:p-8 md:p-10 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
               {isSubmitted ? (
                 <div className="py-12 text-center flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#0050FF]/20 border border-[#00D6FF]/40 text-[#00D6FF] flex items-center justify-center mb-1">

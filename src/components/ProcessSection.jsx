@@ -105,7 +105,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Right Timeline Steps */}
-          <div className="lg:col-span-8 relative pl-5 sm:pl-8 ml-3 sm:ml-0 border-l border-white/10 flex flex-col gap-8 sm:gap-10 md:gap-14">
+          <div className="lg:col-span-8 timeline-track ml-2 sm:ml-0 flex flex-col gap-6 sm:gap-10 md:gap-14">
             {steps.map((step, index) => {
               const isActive = activeStep === index;
               const isPast = activeStep > index;
@@ -118,7 +118,7 @@ export default function ProcessSection() {
                 >
                   {/* Timeline Node Dot */}
                   <div
-                    className={`absolute -left-[32px] sm:-left-[44px] top-1.5 w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                    className={`timeline-node border ${
                       isActive
                         ? 'bg-[#00D6FF] border-[#00D6FF] text-black shadow-[0_0_16px_rgba(0,214,255,0.6)] scale-105'
                         : isPast

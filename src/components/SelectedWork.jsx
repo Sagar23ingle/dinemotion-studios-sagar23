@@ -173,19 +173,19 @@ export default function SelectedWork() {
           className={`${
             isDesktop
               ? 'sticky top-0 left-0 w-full h-screen overflow-hidden flex flex-col justify-between py-10'
-              : 'py-16'
+              : 'py-12 sm:py-16 px-3 sm:px-4'
           }`}
         >
           {/* Header */}
           <div className="container mb-6">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4">
               <div>
                 <span className="section-label">CURATED PORTFOLIO</span>
                 <h2 className="section-heading-large !mb-0 text-white">
                   SELECTED CREATIONS.
                 </h2>
               </div>
-              <div className="text-xs font-mono text-white/50 tracking-wider">
+              <div className="text-[11px] sm:text-xs font-mono text-white/50 tracking-wider">
                 <span>2 WEBSITES • 1 WEB APPLICATION</span>
               </div>
             </div>
@@ -265,17 +265,17 @@ export default function SelectedWork() {
             </div>
           ) : (
             /* Mobile Elegant Vertical Stack */
-            <div className="container flex flex-col gap-6 sm:gap-8">
+            <div className="container flex flex-col gap-5 sm:gap-8">
               {projects.map((project) => (
                 <div
                   key={project.num}
-                  className="rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-5 sm:p-6 flex flex-col gap-5 shadow-2xl"
+                  className="rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 shadow-2xl"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono font-medium text-[#00D6FF] px-2.5 py-0.5 rounded-full bg-[#0050FF]/15 border border-[#00D6FF]/30">
+                    <span className="text-xs font-mono font-medium text-[#00D6FF] px-2.5 py-0.5 rounded-full bg-[#0050FF]/15 border border-[#00D6FF]/30">
                       0{project.num}
                     </span>
-                    <span className="text-[11px] font-mono text-white/60 uppercase tracking-wider">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-white/60 uppercase tracking-wider">
                       {project.category}
                     </span>
                   </div>
@@ -284,10 +284,10 @@ export default function SelectedWork() {
                     <h3 className="font-display text-base sm:text-lg font-semibold text-white mb-2 break-words">
                       {project.title}
                     </h3>
-                    <p className="text-xs text-white/60 leading-relaxed mb-4 font-light">
+                    <p className="text-xs text-white/60 leading-relaxed mb-3.5 font-light">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-1.5 mb-3">
+                    <div className="flex flex-wrap gap-1.5 mb-2">
                       {project.tags.map((t) => (
                         <span
                           key={t}

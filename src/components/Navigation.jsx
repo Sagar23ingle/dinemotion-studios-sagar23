@@ -112,50 +112,56 @@ export default function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-            className="md:hidden text-white/90 p-2 rounded-lg bg-white/5 border border-white/10 focus:outline-none"
+            className="md:hidden text-white p-2.5 rounded-xl bg-white/10 border border-white/15 focus:outline-none touch-target transition-all duration-200 active:scale-95"
           >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMobileMenuOpen ? (
+              <X className="w-5 h-5 text-[#00D6FF]" />
+            ) : (
+              <Menu className="w-5 h-5 text-white" />
+            )}
           </button>
         </div>
       </header>
 
-      {/* Fullscreen Mobile Navigation Drawer */}
+      {/* Fullscreen Mobile Navigation Drawer (Sleek Apple-level Frosted Glass) */}
       <div
-        className={`fixed inset-0 z-40 bg-[#050505]/98 backdrop-blur-3xl md:hidden flex flex-col justify-between p-6 sm:p-8 pt-24 sm:pt-28 overflow-y-auto max-w-full transition-all duration-500 ${
-          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`mobile-nav-drawer ${isMobileMenuOpen ? 'is-open' : ''}`}
+        aria-hidden={!isMobileMenuOpen}
       >
         <div className="flex flex-col gap-6">
-          <span className="text-[11px] uppercase font-mono tracking-widest text-[#6e6e73]">
-            STUDIO MENU
-          </span>
-          {navLinks.map((link, idx) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              style={{
-                transitionDelay: `${idx * 40}ms`
-              }}
-              className="font-display text-2xl font-semibold tracking-tight text-[#f5f5f7] hover:text-[#00D6FF] transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          <div className="flex items-center gap-2 text-[11px] uppercase font-mono tracking-widest text-[#00D6FF]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
+            <span>STUDIO MENU</span>
+          </div>
+
+          <nav className="flex flex-col gap-2" aria-label="Mobile Navigation Links">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="group flex items-center justify-between py-2.5 text-2xl font-display font-semibold tracking-tight text-[#f5f5f7] hover:text-[#00D6FF] active:text-[#00D6FF] transition-colors border-b border-white/[0.04]"
+              >
+                <span>{link.label}</span>
+                <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-[#00D6FF] group-hover:translate-x-1 transition-all" />
+              </a>
+            ))}
+          </nav>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col gap-4">
+        <div className="pt-6 border-t border-white/10 flex flex-col gap-3">
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, '#contact')}
-            className="btn-gradient w-full justify-between py-3.5"
+            className="btn-gradient w-full justify-center py-3.5 text-sm font-semibold"
           >
             <span>Start a Project</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 btn-arrow text-[#00D6FF]" />
           </a>
-          <p className="text-xs text-[#6e6e73] text-center font-mono">
-            © {new Date().getFullYear()} DINEMOTION STUDIOS
-          </p>
+          <div className="flex items-center justify-between text-[11px] text-[#86868b] font-mono pt-1">
+            <span>DINEMOTION STUDIOS</span>
+            <span>© {new Date().getFullYear()}</span>
+          </div>
         </div>
       </div>
     </>

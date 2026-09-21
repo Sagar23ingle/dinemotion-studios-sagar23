@@ -29,10 +29,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black/75 backdrop-blur-xl border-t border-white/[0.08] pt-20 pb-12 text-white/50 relative z-10">
+    <footer className="bg-black/75 backdrop-blur-xl border-t border-white/[0.08] pt-14 sm:pt-20 pb-10 sm:pb-12 text-white/50 relative z-10 px-3 sm:px-4">
       <div className="container">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 pb-12 sm:pb-16 border-b border-white/[0.08]">
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
